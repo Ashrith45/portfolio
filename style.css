@@ -1,0 +1,60 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(120deg, #1d2671, #c33764);
+    color: white;
+}
+
+/* Hero */
+.hero {
+    height: 100vh;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 10px;
+}
+
+.hero h2 {
+    font-weight: 300;
+    color: #ffdd59;
+}
+
+/* Cards */
+.card {
+    background: rgba(255, 255, 255, 0.1);
+    margin: 20px auto;
+    padding: 25px;
+    width: 80%;
+    border-radius: 12px;
+    backdrop-filter: blur(8px);
+}
+
+.card h3 {
+    color: #ffdd59;
+}
+
+/* Skills */
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.skills span {
+    background: rgba(0,0,0,0.3);
+    padding: 8px 14px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    opacity: 0.8;
+}

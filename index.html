@@ -2,60 +2,56 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rangu Ashrith | Portfolio</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <h1>Rangu Ashrith</h1>
-        <h2 id="typing"></h2>
+    <nav>
+        <div class="logo">RA</div>
+        <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+        </ul>
+    </nav>
+
+    <header class="hero">
+        <h1 id="welcome-text">Hi, I'm Rangu Ashrith</h1>
+        <p>B.Tech CSE - Data Science Student</p>
+        <button onclick="changeColor()" class="btn">Click to Interact</button>
+    </header>
+
+    <section id="about" class="container">
+        <h2>About Me</h2>
+        <p>I am a passionate <strong>Data Science</strong> student focused on building efficient solutions and learning modern web technologies. I enjoy turning complex problems into simple, beautiful designs.</p>
     </section>
 
-    <!-- About -->
-    <section class="card">
-        <h3>About Me</h3>
-        <p>
-            I am a  student at NIAT Pune with a strong interest in
-            web development and logical problem solving. I enjoy learning by building
-            and improving real-world projects.
-        </p>
-    </section>
-
-    <!-- Skills -->
-    <section class="card">
-        <h3>My Skills</h3>
-        <div class="skills">
-            <span>HTML & CSS</span>
-            <span>Computer Programming</span>
-            <span>JavaScript (Basics)</span>
-            <span>Communication Skills</span>
-            <span>Problem Solving</span>
+    <section id="skills" class="container">
+        <h2>Technical Skills</h2>
+        <div class="skills-grid">
+            <div class="skill-card">HTML/CSS</div>
+            <div class="skill-card">Python</div>
+            <div class="skill-card">Problem Solving</div>
+            <div class="skill-card">C Programming</div>
         </div>
     </section>
 
-    <!-- Projects -->
-    <section class="card">
-        <h3>Projects</h3>
-        <ul>
-            <li><strong>Unique Portfolio Website</strong> – Built with HTML, CSS & JS</li>
-            <li><strong>Programming Practice</strong> – Logic & problem-solving tasks</li>
-        </ul>
+    <section id="projects" class="container">
+        <h2>Projects</h2>
+        <div class="project-list">
+            <div class="project-item">
+                <h3>Unique Portfolio</h3>
+                <p>A professional website built with HTML, CSS, and JS.</p>
+                <a href="https://github.com/ashrith45" target="_blank">View Code</a>
+            </div>
+        </div>
     </section>
 
-    <!-- Education -->
-    <section class="card">
-        <h3>Education</h3>
-        <p>
-            NIAT, Pune <br>
-            Course: CSE-Data Science
-        </p>
-    </section>
-
-    <!-- Footer -->
     <footer>
-        <p>© 2025 Rangu Ashrith | Designed by Me</p>
+        <p>&copy; 2026 Rangu Ashrith | <a href="mailto:ranguashrith512@gmail.com">Contact Me</a></p>
     </footer>
 
     <script src="script.js"></script>

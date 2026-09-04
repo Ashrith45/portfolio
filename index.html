@@ -1,62 +1,196 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rangu Ashrith | Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Ashrith Rangu — Computer Science student, video editor and creative developer.">
+  <title>Ashrith Rangu — Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <div class="noise"></div>
+  <div class="cursor-dot"></div>
+  <div class="cursor-ring"></div>
 
+  <header class="site-header">
+    <a class="logo" href="#top">AR<span>.</span></a>
     <nav>
-        <div class="logo">RA</div>
-        <ul class="nav-links">
-            <li><a href="#about">About</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#projects">Projects</a></li>
-        </ul>
+      <a href="#about">About</a>
+      <a href="#work">Work</a>
+      <a href="#learning">Learning</a>
+      <a href="#contact">Contact</a>
     </nav>
+    <a class="availability" href="mailto:ranguashrith512@gmail.com"><i></i> Available for opportunities</a>
+    <button class="menu-btn" aria-label="Open menu">Menu</button>
+  </header>
 
-    <header class="hero">
-        <h1 id="welcome-text">Hi, I'm Rangu Ashrith</h1>
-        <p>B.Tech CSE - Data Science Student</p>
-        <button onclick="changeColor()" class="btn">Click to Interact</button>
-    </header>
-
-    <section id="about" class="container">
-        <h2>About Me</h2>
-        <p>I am a passionate <strong>Data Science</strong> student focused on building efficient solutions and learning modern web technologies. I enjoy turning complex problems into simple, beautiful designs.</p>
-    </section>
-
-    <section id="skills" class="container">
-        <h2>Technical Skills</h2>
-        <div class="skills-grid">
-            <div class="skill-card">HTML/CSS</div>
-            <div class="skill-card">Python</div>
-            <div class="skill-card">Problem Solving</div>
-            <div class="skill-card">C Programming</div>
+  <main id="top">
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">Computer Science × Creative Work</p>
+        <h1>Hi, I'm<br><span>Ashrith.</span></h1>
+        <p class="hero-text">
+          I’m a Computer Science student who enjoys building for the web,
+          editing videos, and turning ideas into things people can actually experience.
+        </p>
+        <div class="hero-actions">
+          <a class="button button-light" href="#work">Explore my work <span>↓</span></a>
+          <a class="text-link" href="mailto:ranguashrith512@gmail.com">Let's talk ↗</a>
         </div>
+      </div>
+
+      <div class="hero-visual" aria-label="Ashrith Rangu creative developer graphic">
+        <div class="hero-mark">
+          <span class="hero-mark-small">AR / 01</span>
+          <strong>AR</strong>
+          <span class="hero-mark-bottom">CODE · EDIT · CREATE</span>
+        </div>
+        <div class="orbit orbit-one"></div>
+        <div class="orbit orbit-two"></div>
+        <span class="cross cross-a">+</span>
+        <span class="cross cross-b">+</span>
+      </div>
+
+      <div class="scroll-note"><span></span> Scroll to explore</div>
     </section>
 
-    <section id="projects" class="container">
-      <h2>Projects</h2>
-    <div class="project-list">
-        <div class="project-item">
-            <h3>Unique Portfolio</h3>
-                <p>A professional website built with HTML, CSS, and JS.</p>
-                <a href="https://github.com/ashrith45" target="_blank">View Code</a>
+    <section class="marquee" aria-hidden="true">
+      <div>CODE <b>✦</b> EDIT <b>✦</b> CREATE <b>✦</b> LEARN <b>✦</b> BUILD <b>✦</b> CODE <b>✦</b> EDIT <b>✦</b> CREATE <b>✦</b> LEARN <b>✦</b></div>
+    </section>
+
+    <section class="section about" id="about">
+      <div class="section-label">01 / About</div>
+      <div class="about-content">
+        <p class="big-copy">
+          I like working where <em>technology</em> and <em>creativity</em> meet.
+        </p>
+        <div class="about-side">
+          <p>
+            I’m currently pursuing Computer Science Engineering at NIAT, Pune.
+            Outside academics, I spend time learning web development, video editing
+            and content creation.
+          </p>
+          <p>
+            I’m still early in my journey, which is exactly why I enjoy experimenting.
+            Every project gives me something new to learn — whether that’s writing
+            better code, telling a better story through an edit, or designing a better experience.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section work" id="work">
+      <div class="section-label">02 / Selected work</div>
+
+      <div class="work-switch" role="tablist" aria-label="Work categories">
+        <button class="work-tab active" data-category="all">Everything</button>
+        <button class="work-tab" data-category="code">Development</button>
+        <button class="work-tab" data-category="video">Video</button>
+      </div>
+
+      <div class="projects">
+        <article class="project project-large" data-type="code">
+          <div class="project-visual browser">
+            <div class="browser-bar"><span></span><span></span><span></span><small>ashrith / portfolio</small></div>
+            <div class="browser-body">
+              <span class="mini-label">01 — WEB</span>
+              <strong>Personal<br>Portfolio.</strong>
+              <div class="fake-lines"><i></i><i></i><i></i></div>
             </div>
-        </div>
+          </div>
+          <div class="project-info">
+            <div>
+              <span class="project-number">01</span>
+              <h2>Interactive Portfolio</h2>
+            </div>
+            <p>A personal space to bring together my development work, creative projects and journey.</p>
+            <span class="project-tags">HTML · CSS · JavaScript</span>
+          </div>
+        </article>
+
+        <article class="project" data-type="video">
+          <div class="project-visual video-card">
+            <div class="play">▶</div>
+            <span>VIDEO<br>EDITING</span>
+          </div>
+          <div class="project-info">
+            <div>
+              <span class="project-number">02</span>
+              <h2>Video Editing</h2>
+            </div>
+            <p>Short-form edits focused on pacing, sound, captions and visual storytelling.</p>
+            <span class="project-tags">Editing · Storytelling · Content</span>
+          </div>
+        </article>
+
+        <article class="project" data-type="code">
+          <div class="project-visual code-card">
+            <div class="code-lines">
+              <span><b>01</b> const idea = <em>"build"</em>;</span>
+              <span><b>02</b> idea.<strong>create</strong>();</span>
+              <span><b>03</b> idea.<strong>learn</strong>();</span>
+              <span><b>04</b> idea.<strong>repeat</strong>();</span>
+            </div>
+          </div>
+          <div class="project-info">
+            <div>
+              <span class="project-number">03</span>
+              <h2>Web Experiments</h2>
+            </div>
+            <p>Small projects and experiments while improving my JavaScript and React skills.</p>
+            <span class="project-tags">JavaScript · React · UI</span>
+          </div>
+        </article>
+      </div>
     </section>
 
-    <footer>
-        <p>&copy; 2026 Rangu Ashrith | <a href="mailto:ranguashrith512@gmail.com">Contact Me</a></p>
-    </footer>
+    <section class="section learning" id="learning">
+      <div class="section-label">03 / Currently learning</div>
+      <div class="learning-grid">
+        <div class="learning-intro">
+          <p class="big-copy">Not finished.<br><em>Still becoming.</em></p>
+          <p class="muted">A snapshot of what I’m actively working on right now.</p>
+        </div>
+        <div class="skills-list">
+          <div><span>01</span><strong>JavaScript</strong><small>Getting deeper</small></div>
+          <div><span>02</span><strong>React</strong><small>Learning & building</small></div>
+          <div><span>03</span><strong>C++ / DSA</strong><small>Strengthening fundamentals</small></div>
+          <div><span>04</span><strong>Video Editing</strong><small>Creating & experimenting</small></div>
+          <div><span>05</span><strong>Creative Web Design</strong><small>Exploring interaction</small></div>
+        </div>
+      </div>
+    </section>
 
-    <script src="script.js"></script>
+    <section class="section contact" id="contact">
+      <div class="section-label">04 / Contact</div>
+      <div class="contact-inner">
+        <p class="eyebrow">Have an opportunity or an idea?</p>
+        <h2>Let's make<br><span>something.</span></h2>
+        <div class="contact-row">
+          <a class="email-link" href="mailto:ranguashrith512@gmail.com">ranguashrith512@gmail.com ↗</a>
+          <a class="linkedin-link" href="https://www.linkedin.com/in/ashrith-rangu-2b1910357" target="_blank" rel="noopener">LinkedIn ↗</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <span>© 2026 ASHRITH RANGU</span>
+    <span>BUILT WITH CURIOSITY.</span>
+    <a href="#top">Back to top ↑</a>
+  </footer>
+
+  <div class="mobile-menu">
+    <button class="close-menu" aria-label="Close menu">×</button>
+    <a href="#about">About</a>
+    <a href="#work">Work</a>
+    <a href="#learning">Learning</a>
+    <a href="#contact">Contact</a>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
-
-
-

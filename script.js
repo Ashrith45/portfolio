@@ -1,86 +1,62 @@
-const dot = document.querySelector(".cursor-dot");
-const ring = document.querySelector(".cursor-ring");
+const progress=document.querySelector('.progress');
+window.addEventListener('scroll',()=>{const h=document.documentElement.scrollHeight-window.innerHeight;progress.style.width=(window.scrollY/h*100)+'%';});
 
-if (window.matchMedia("(pointer:fine)").matches) {
-  window.addEventListener("pointermove", (e) => {
-    dot.style.left = `${e.clientX}px`;
-    dot.style.top = `${e.clientY}px`;
-    ring.style.left = `${e.clientX}px`;
-    ring.style.top = `${e.clientY}px`;
-  });
-
-  document.querySelectorAll("a, button, .project, .portrait-wrap").forEach((el) => {
-    el.addEventListener("mouseenter", () => {
-      ring.style.width = "52px";
-      ring.style.height = "52px";
-      ring.style.borderColor = "#d8ff4f";
-    });
-    el.addEventListener("mouseleave", () => {
-      ring.style.width = "34px";
-      ring.style.height = "34px";
-      ring.style.borderColor = "#777";
-    });
-  });
-}
-
-const portrait = document.querySelector(".portrait-wrap");
-const heroVisual = document.querySelector(".hero-visual");
-
-if (heroVisual && window.matchMedia("(pointer:fine)").matches) {
-  heroVisual.addEventListener("pointermove", (e) => {
-    const r = heroVisual.getBoundingClientRect();
-    const x = (e.clientX - r.left) / r.width - 0.5;
-    const y = (e.clientY - r.top) / r.height - 0.5;
-    portrait.style.transform = `translate(${x * 10}px, ${y * 10}px)`;
-  });
-  heroVisual.addEventListener("pointerleave", () => {
-    portrait.style.transform = "";
-  });
-}
-
-const tabs = document.querySelectorAll(".work-tab");
-const projects = document.querySelectorAll(".project");
-
-tabs.forEach((tab) => {
-  tab.addEventListener("click", () => {
-    tabs.forEach((t) => t.classList.remove("active"));
-    tab.classList.add("active");
-
-    const category = tab.dataset.category;
-    projects.forEach((project) => {
-      const show = category === "all" || project.dataset.type === category;
-      project.style.display = show ? "" : "none";
-    });
-  });
+const dot=document.querySelector('.cursor-dot'), ring=document.querySelector('.cursor-ring');
+window.addEventListener('pointermove',e=>{dot.style.left=e.clientX+'px';dot.style.top=e.clientY+'px';ring.animate({left:e.clientX+'px',top:e.clientY+'px'},{duration:450,fill:'forwards'});});
+document.querySelectorAll('a,button,.tilt').forEach(el=>{
+  el.addEventListener('mouseenter',()=>ring.classList.add('big'));
+  el.addEventListener('mouseleave',()=>ring.classList.remove('big'));
 });
 
-const menu = document.querySelector(".mobile-menu");
-const menuButton = document.querySelector(".menu-btn");
-const closeButton = document.querySelector(".close-menu");
+const menu=document.querySelector('.mobile-nav'), toggle=document.querySelector('.menu-toggle');
+toggle.addEventListener('click',()=>menu.classList.toggle('open'));
+menu.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>menu.classList.remove('open')));
 
-menuButton?.addEventListener("click", () => menu.classList.add("open"));
-closeButton?.addEventListener("click", () => menu.classList.remove("open"));
-document.querySelectorAll(".mobile-menu a").forEach((link) => {
-  link.addEventListener("click", () => menu.classList.remove("open"));
+const observer=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('show')}),{threshold:.12});
+document.querySelectorAll('.reveal,.section').forEach(x=>observer.observe(x));
+
+const levels={
+  comfortable:'Comfortable — this is part of my regular foundation.',
+  intermediate:'Intermediate — I can work with the fundamentals and keep improving.',
+  basic:'Basic — I know the fundamentals and I am strengthening them.',
+  learning:'Currently learning — building projects and going deeper.',
+  creative:'Creative skill — something I actively practise outside coding.'
+};
+const status=document.getElementById('skill-status');
+document.querySelectorAll('.skill-cloud button').forEach(btn=>{
+  btn.addEventListener('mouseenter',()=>{status.textContent=levels[btn.dataset.level];});
+  btn.addEventListener('click',()=>{document.querySelectorAll('.skill-cloud button').forEach(b=>b.classList.remove('active'));btn.classList.add('active');status.textContent=levels[btn.dataset.level];});
 });
 
-const revealItems = document.querySelectorAll(".section, .hero-copy, .hero-visual");
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach((entry) => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add("in-view");
-      observer.unobserve(entry.target);
-    }
+document.querySelectorAll('.tilt').forEach(card=>{
+  card.addEventListener('pointermove',e=>{
+    if(innerWidth<850)return;
+    const r=card.getBoundingClientRect(), x=(e.clientX-r.left)/r.width-.5, y=(e.clientY-r.top)/r.height-.5;
+    card.style.transform=`perspective(900px) rotateX(${y*-2.5}deg) rotateY(${x*2.5}deg)`;
   });
-}, { threshold: 0.12 });
-
-revealItems.forEach((item) => {
-  item.style.opacity = "0";
-  item.style.transform = "translateY(22px)";
-  item.style.transition = "opacity .8s ease, transform .8s ease";
-  observer.observe(item);
+  card.addEventListener('pointerleave',()=>card.style.transform='');
 });
 
-const revealStyle = document.createElement("style");
-revealStyle.textContent = ".in-view{opacity:1!important;transform:none!important}";
-document.head.appendChild(revealStyle);
+document.querySelectorAll('.magnetic').forEach(el=>{
+  el.addEventListener('pointermove',e=>{
+    const r=el.getBoundingClientRect(), x=e.clientX-r.left-r.width/2, y=e.clientY-r.top-r.height/2;
+    el.style.transform=`translate(${x*.12}px,${y*.12}px)`;
+  });
+  el.addEventListener('pointerleave',()=>el.style.transform='');
+});
+
+document.querySelectorAll('a[href^="#"]').forEach(a=>a.addEventListener('click',e=>{
+  const target=document.querySelector(a.getAttribute('href'));
+  if(target){e.preventDefault();target.scrollIntoView({behavior:'smooth'});}
+}));
+
+// Small human touch: the hero line changes occasionally, without pretending to be a chatbot.
+const lines=[
+  'I build things, break things, fix them, and usually learn something new in the process.',
+  'I like turning “I don’t know how yet” into “okay, it works.”',
+  'I’m learning to build better things — one project at a time.'
+];
+const intro=document.querySelector('.hero-intro');
+let i=0;
+setInterval(()=>{i=(i+1)%lines.length;intro.style.opacity=0;setTimeout(()=>{intro.textContent=lines[i];intro.style.opacity=1},250)},5000);
+intro.style.transition='opacity .25s ease';

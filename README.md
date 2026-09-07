@@ -17,7 +17,7 @@ For the best experience, use VS Code with the Live Server extension.
 ## Publish with GitHub Pages
 
 1. Create a new GitHub repository.
-2. Upload all files while keeping the `assets` folder.
+2. Upload `index.html`, `style.css`, `script.js`, and `README.md`.
 3. Go to **Settings → Pages**.
 4. Under **Build and deployment**, choose **Deploy from a branch**.
 5. Select your `main` branch and `/ (root)`.

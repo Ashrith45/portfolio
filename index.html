@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Ashrith Rangu — Computer Science student, front-end learner and video editor.">
+  <title>Ashrith Rangu — Developer / Creative</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="progress"></div>
+  <div class="noise"></div>
+  <div class="cursor-dot"></div>
+  <div class="cursor-ring"></div>
+
+  <header class="nav">
+    <a href="#top" class="brand">AR<span>.</span></a>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#work">Work</a>
+      <a href="#journey">Journey</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a class="nav-cta magnetic" href="mailto:ranguashrith512@gmail.com">Let's talk ↗</a>
+    <button class="menu-toggle" aria-label="Open menu"><span></span><span></span></button>
+  </header>
+
+  <div class="mobile-nav">
+    <a href="#about">About</a><a href="#skills">Skills</a><a href="#work">Work</a><a href="#journey">Journey</a><a href="#contact">Contact</a>
+  </div>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-grid"></div>
+      <div class="hero-copy reveal">
+        <div class="status"><i></i> Open to internships & interesting projects</div>
+        <p class="kicker">COMPUTER SCIENCE × CREATIVE WORK</p>
+        <h1>Hey, I'm <em>Ashrith.</em></h1>
+        <p class="hero-intro">I build things, break things, fix them, and usually learn something new in the process.</p>
+        <p class="hero-sub">CSE student exploring front-end development, databases, programming and video editing. I'm still learning — and that's kind of the point.</p>
+        <div class="hero-actions">
+          <a class="btn primary magnetic" href="#work">See what I make <span>↓</span></a>
+          <a class="under-link" href="#about">A little about me →</a>
+        </div>
+      </div>
+
+      <div class="hero-card reveal">
+        <div class="card-top"><span>01 / currently</span><span>2026</span></div>
+        <div class="profile-photo">
+          <img src="photo.png" alt="Ashrith Rangu" loading="eager">
+          <div class="photo-label">that's me :)</div>
+        </div>
+        <div class="floating-note note-one">code<br>→ create</div>
+        <div class="floating-note note-two">learn<br>→ repeat</div>
+        <div class="card-bottom"><span>student</span><span>builder</span><span>editor</span></div>
+      </div>
+
+      <div class="scroll-cue"><span></span> scroll slowly</div>
+    </section>
+
+    <section class="marquee"><div>BUILD WITH CURIOSITY ✦ LEARN BY DOING ✦ MAKE IT FEEL HUMAN ✦ BUILD WITH CURIOSITY ✦ LEARN BY DOING ✦ MAKE IT FEEL HUMAN ✦</div></section>
+
+    <section class="section" id="about">
+      <div class="section-head"><span>01</span><p>ABOUT ME</p></div>
+      <div class="about-layout">
+        <h2>A little about me.</h2>
+        <div class="about-copy">
+          <p>I'm a Computer Science Engineering student at NIAT, Pune. I like technology, but I also like the creative side of things — especially video editing and making digital content.</p>
+          <p>Most of what I know has come from building, getting stuck, searching, trying again and finally making the thing work. I'm early in my journey, but I'm serious about getting better.</p>
+          <div class="mini-facts"><span>📍 Pune</span><span>🎓 CSE Student</span><span>🎬 Video Editor</span><span>💻 Web Learner</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section skills-section" id="skills">
+      <div class="section-head"><span>02</span><p>SKILLS</p></div>
+      <div class="skills-intro"><h2>Things I can actually work with.</h2><p>Not a list of every technology I've ever opened. Just the things I'm learning and using.</p></div>
+      <div class="skill-cloud">
+        <button data-level="comfortable">HTML</button>
+        <button data-level="comfortable">CSS</button>
+        <button data-level="basic">JavaScript</button>
+        <button data-level="comfortable">SQL</button>
+        <button data-level="intermediate">Python</button>
+        <button data-level="basic">C++</button>
+        <button data-level="comfortable">DBMS</button>
+        <button data-level="creative">Video Editing</button>
+        <button data-level="creative">Short-form Content</button>
+        <button data-level="creative">Social Media Content</button>
+        <button data-level="creative">Visual Storytelling</button>
+      </div>
+      <div class="skill-note"><span class="legend-dot"></span><span>Hover a skill — I’ll tell you where I’m at with it.</span><strong id="skill-status">Pick one ↑</strong></div>
+    </section>
+
+    <section class="section work-section" id="work">
+      <div class="section-head"><span>03</span><p>SELECTED WORK</p></div>
+      <div class="work-intro"><h2>A few things I've made.</h2><p>Small projects count. That's where most of the learning happens.</p></div>
+
+      <div class="project-list">
+        <article class="project featured tilt">
+          <div class="project-number">01</div>
+          <div class="project-visual portfolio-preview">
+            <div class="preview-nav">AR. <span>ABOUT&nbsp;&nbsp; WORK&nbsp;&nbsp; CONTACT</span></div>
+            <div class="preview-title">PORTFOLIO<br><em>01</em></div>
+            <div class="preview-circle">AR</div>
+          </div>
+          <div class="project-copy">
+            <p class="tag">WEB / PERSONAL</p><h3>This Portfolio</h3>
+            <p>A personal website built with HTML, CSS and JavaScript. I keep changing it because apparently one version is never enough.</p>
+            <div class="tags"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>Responsive</span></div>
+            <a href="https://ashrith45.github.io/portfolio/" target="_blank" rel="noopener">Visit live site ↗</a>
+          </div>
+        </article>
+
+
+
+        <article class="project tilt">
+          <div class="project-number">02</div>
+          <div class="project-visual video-preview">
+            <video controls muted playsinline preload="metadata" poster="video-thumb.jpg">
+              <source src="edited-video.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+            <div class="video-label">EDITED VIDEO · 00:20</div>
+          </div>
+          <div class="project-copy">
+            <p class="tag">CREATIVE / VIDEO</p><h3>An Edit I Made</h3>
+            <p>This is one of my edited videos. I’m interested in the creative side of digital work too — pacing, cuts, music, timing and making a short piece feel engaging.</p>
+            <div class="tags"><span>Video Editing</span><span>Short-form</span><span>Creative</span></div>
+            <a href="edited-video.mp4" target="_blank" rel="noopener">Open video ↗</a>
+          </div>
+        </article>
+
+        <article class="project tilt">
+          <div class="project-number">03</div>
+          <div class="project-visual code-preview"><span>SELECT * FROM</span><strong>projects</strong><span>WHERE</span><em>learning = true;</em><b>✓  always</b></div>
+          <div class="project-copy">
+            <p class="tag">DATABASE / LEARNING</p><h3>SQL & DBMS Practice</h3>
+            <p>Working with SQL and database concepts while building stronger fundamentals for real applications.</p>
+            <div class="tags"><span>SQL</span><span>DBMS</span><span>Queries</span></div>
+          </div>
+        </article>
+
+        <article class="project tilt">
+          <div class="project-number">04</div>
+          <div class="project-visual edit-preview"><div class="timeline"><i></i><i></i><i></i><i></i></div><span>PLAY</span></div>
+          <div class="project-copy">
+            <p class="tag">CREATIVE / VIDEO</p><h3>Short-form Editing</h3>
+            <p>Editing reels and short-form content with attention to pacing, captions, music and the little details that make a cut feel right.</p>
+            <div class="tags"><span>Editing</span><span>Content</span><span>Storytelling</span></div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section journey" id="journey">
+      <div class="section-head"><span>04</span><p>MY JOURNEY</p></div>
+      <div class="journey-layout">
+        <div><h2>Still figuring it out.<br><em>Still moving forward.</em></h2><p>I'm not trying to pretend I've mastered everything. Here's what I'm focusing on next.</p></div>
+        <div class="timeline-list">
+          <div><span>NOW</span><strong>Front-end fundamentals</strong><p>Getting stronger with JavaScript, React and responsive UI.</p></div>
+          <div><span>NEXT</span><strong>Modern web development</strong><p>Redux, REST APIs, better project architecture and more real projects.</p></div>
+          <div><span>ALONGSIDE</span><strong>Creative work</strong><p>Keep editing, experimenting and learning how to tell better stories visually.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section contact-section" id="contact">
+      <div class="contact-box">
+        <p class="kicker">05 / CONTACT</p>
+        <h2>Got something<br><em>interesting?</em></h2>
+        <p>I'm always happy to hear about internships, projects, collaborations or just an idea worth building.</p>
+        <a class="big-email magnetic" href="mailto:ranguashrith512@gmail.com">ranguashrith512@gmail.com <span>↗</span></a>
+        <div class="socials"><a href="https://www.linkedin.com/in/ashrith-rangu-2b1910357" target="_blank" rel="noopener">LinkedIn ↗</a><a href="https://github.com/ashrith45" target="_blank" rel="noopener">GitHub ↗</a><a href="https://ashrith45.github.io/portfolio/" target="_blank" rel="noopener">Live Portfolio ↗</a></div>
+      </div>
+    </section>
+  </main>
+
+  <footer><span>ASHRITH RANGU © 2026</span><span>BUILT WITH CURIOSITY, NOT PERFECTION.</span><a href="#top">BACK TO TOP ↑</a></footer>
+  <script src="script.js"></script>
+</body>
+</html>

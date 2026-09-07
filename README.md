@@ -1,30 +1,26 @@
-# Ashrith Rangu — Personal Portfolio
+# Ashrith Rangu — Portfolio v2
 
-A creative, interactive personal portfolio built with plain HTML, CSS and JavaScript.
+A humanised, interactive portfolio built with plain HTML, CSS and JavaScript.
 
 ## Files
+- index.html
+- style.css
+- script.js
 
-- `index.html` — page structure and content
-- `style.css` — visual design and responsive layout
-- `script.js` — cursor effects, project filtering, mobile menu and reveal animations
+## Highlights
+- Interactive skill cloud
+- Custom cursor
+- Magnetic buttons
+- Scroll progress bar
+- Tilt-on-hover project cards
+- Animated marquee
+- Responsive mobile navigation
+- Human, first-person copy
+- Portfolio / LinkedIn / GitHub / email links
+- No stock portrait or AI-generated personal claims
 
-## Run locally
+## Run
+Open `index.html` directly, or use a simple local server.
 
-Open `index.html` in a browser.
-
-For the best experience, use VS Code with the Live Server extension.
-
-## Publish with GitHub Pages
-
-1. Create a new GitHub repository.
-2. Upload `index.html`, `style.css`, `script.js`, and `README.md`.
-3. Go to **Settings → Pages**.
-4. Under **Build and deployment**, choose **Deploy from a branch**.
-5. Select your `main` branch and `/ (root)`.
-6. Save.
-
-Your portfolio will then be available through your GitHub Pages URL.
-
-## Before publishing
-
-Replace the placeholder project descriptions with your actual work and add real project links/videos when you have them.
+## Deploy
+Upload the three files to the root of your GitHub Pages repository.
